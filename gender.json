@@ -1,0 +1,74 @@
+[
+  {
+    "athlete_id": "athlete_001",
+    "name": "Michael Johnson",
+    "sport_team": "UCLA Football",
+    "profile_image_path": "./data/image1.jpg",
+    "explicit_gender": null,
+    "created_at": { "$date": "2024-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2024-01-01T00:00:00Z" }
+  },
+  {
+    "athlete_id": "athlete_002",
+    "name": "Alex Morgan",
+    "sport_team": "US Women's Soccer",
+    "profile_image_path": "./data/image2.jpg",
+    "explicit_gender": null,
+    "created_at": { "$date": "2024-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2024-01-01T00:00:00Z" }
+  },
+  {
+    "athlete_id": "athlete_003",
+    "name": "Alex Wilson",
+    "sport_team": "Track and Field",
+    "profile_image_path": "./data/image3.jpg",
+    "explicit_gender": null,
+    "created_at": { "$date": "2024-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2024-01-01T00:00:00Z" }
+  },
+  {
+    "athlete_id": "athlete_004",
+    "name": "Jordan Lee",
+    "sport_team": "Swimming",
+    "profile_image_path": "./data/image4.jpg",
+    "explicit_gender": null,
+    "created_at": { "$date": "2024-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2024-01-01T00:00:00Z" }
+  },
+  {
+    "athlete_id": "athlete_005",
+    "name": "Sarah Johnson",
+    "sport_team": "Men's Basketball Team",
+    "profile_image_path": "./data/image5.jpg",
+    "explicit_gender": null,
+    "created_at": { "$date": "2024-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2024-01-01T00:00:00Z" }
+  },
+  {
+    "athlete_id": "athlete_006",
+    "name": "Chris Taylor",
+    "sport_team": "Tennis Club",
+    "profile_image_path": null,
+    "explicit_gender": null,
+    "created_at": { "$date": "2024-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2024-01-01T00:00:00Z" }
+  },
+  {
+    "athlete_id": "athlete_007",
+    "name": "Test User",
+    "sport_team": "Soccer",
+    "profile_image_path": null,
+    "explicit_gender": "female",
+    "created_at": { "$date": "2024-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2024-01-01T00:00:00Z" }
+  },
+  {
+    "athlete_id": "athlete_008",
+    "name": "Emma Davis",
+    "sport_team": "Volleyball",
+    "profile_image_path": "./data/image6.jpg",
+    "explicit_gender": null,
+    "created_at": { "$date": "2024-01-01T00:00:00Z" },
+    "updated_at": { "$date": "2024-01-01T00:00:00Z" }
+  }
+]

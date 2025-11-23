@@ -1,5 +1,9 @@
 # 🧠 Multi-Signal Gender Inference AI Agent
 
+## Version 2 🎬 [Demo Video Link](https://drive.google.com/file/d/1QrdpjsB79MIfbTwClW-svHe4I-FvCOxt/view?usp=sharing)
+
+Version 2 main change is implementing MongoDB Atlas as the persistence layer with GridFS for binary storage. Profile images are no longer stored as filesystem paths but are instead managed through MongoDB's GridFS, enabling centralized binary storage that works seamlessly across distributed deployments—images are uploaded once to GridFS, downloaded as temporary files when needed for Face++ API calls, and automatically cleaned up after processing.
+
 ## 📜 Overview
 
 This project implements a sophisticated, logic-driven AI Agent designed to accurately **infer (predict) a user's gender** when explicit information is missing. The Agent's core strength lies in its ability to **intelligently integrate and dynamically weigh** signals from three distinct sources: **name recognition, sports affiliation, and profile picture analysis**. This approach ensures high confidence scores and provides full attribution for every inference.

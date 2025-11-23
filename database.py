@@ -18,19 +18,35 @@ class MongoDBConnection:
         Initialize MongoDB connection
         
         Args:
-            uri: MongoDB connection string
+            uri: MongoDB connection string (if None, reads from config.py)
         """
         if uri is None:
-            # Use your MongoDB Atlas connection string
-            uri = "mongodb+srv://zhangyichi10_db_user:jmIjiqELy26PUVlh@gender.wg4opvd.mongodb.net/"
+            try:
+                from config import MONGODB_URI, DATABASE_NAME, ATHLETES_COLLECTION, GENDER_OVERRIDES_COLLECTION, INFERENCE_LOGS_COLLECTION
+                uri = MONGODB_URI
+                db_name = DATABASE_NAME
+                athletes_collection = ATHLETES_COLLECTION
+                overrides_collection = GENDER_OVERRIDES_COLLECTION
+                logs_collection = INFERENCE_LOGS_COLLECTION
+            except ImportError:
+                raise ImportError(
+                    "config.py not found. Please create config.py from config.example.py "
+                    "and fill in your MongoDB connection string."
+                )
+        else:
+            # Use provided URI and default collection names
+            db_name = "gender"
+            athletes_collection = "gender"
+            overrides_collection = "gender_overrides"
+            logs_collection = "inference_logs"
         
         self.client = MongoClient(uri)
-        self.db = self.client['gender']  # Your database name
+        self.db = self.client[db_name]
         
         # Collections
-        self.athletes = self.db['gender']  # Your collection name
-        self.gender_overrides = self.db['gender_overrides']
-        self.inference_logs = self.db['inference_logs']
+        self.athletes = self.db[athletes_collection]
+        self.gender_overrides = self.db[overrides_collection]
+        self.inference_logs = self.db[logs_collection]
         
         # Initialize GridFS
         self.fs = gridfs.GridFS(self.db)
